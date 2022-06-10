@@ -7,7 +7,12 @@ scalaVersion := "2.12.7"
 val flinkVersion = "1.14.4"
 
 
-val flinkDependencies = Seq("org.apache.flink" %% "flink-clients" % flinkVersion % "provided",
+val flinkDependencies = Seq(
+
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.2",
+  "com.fasterxml.jackson.core" % "jackson-core" % "2.9.2",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.12.2",
+  "org.apache.flink" %% "flink-clients" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-streaming-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-table-planner-blink" % "1.13.6" % "provided",
@@ -24,7 +29,7 @@ val flinkDependencies = Seq("org.apache.flink" %% "flink-clients" % flinkVersion
   "org.apache.hadoop" % "hadoop-core" % "1.2.1",
   "org.apache.parquet" % "parquet-avro" % "1.11.1" exclude("org.apache.hadoop","hadoop-client") exclude("it.unimi.dsi","fastutil"),
   "org.slf4j" % "slf4j-simple" % "1.7.36",
-  "org.slf4j" % "slf4j-api" % "1.7.36",
+  "org.slf4j" % "slf4j-api" % "1.7.36"
 )
 
 libraryDependencies ++= flinkDependencies

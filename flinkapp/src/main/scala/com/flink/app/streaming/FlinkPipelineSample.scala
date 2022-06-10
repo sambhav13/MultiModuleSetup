@@ -4,7 +4,7 @@ import org.apache.flink.api.common.RuntimeExecutionMode
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.streaming.api.scala._
 
-object FlinkPipeline {
+object FlinkPipelineSample {
 
   def main(args:Array[String]) = {
 
